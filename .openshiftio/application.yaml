@@ -92,7 +92,7 @@ objects:
         incremental: true
       type: Source
     triggers:
-    - github:
+    - generic:
         secret: ${GOGS_WEBHOOK_SECRET}
       type: Generic
     - type: ConfigChange
@@ -128,7 +128,7 @@ objects:
         incremental: true
       type: Source
     triggers:
-    - github:
+    - generic:
         secret: ${GOGS_WEBHOOK_SECRET}
       type: Generic
     - type: ConfigChange
