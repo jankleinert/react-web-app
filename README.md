@@ -8,7 +8,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 `find . | grep openshiftio | grep application | xargs -n 1 oc apply -f`
 
-`oc new-app --template react-web-app -p SOURCE_REPOSITORY_URL=https://github.com/lholmquist/react-web-app`
+`oc new-app --template react-web-app -p SOURCE_REPOSITORY_URL=https://github.com/jankleinert/react-web-app`
 
 ## Table of Contents
 
