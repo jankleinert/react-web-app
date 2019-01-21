@@ -27,9 +27,9 @@ parameters:
     displayName: Output Directory
     value: build
     required: false
-  - name: GITHUB_WEBHOOK_SECRET
-    description: A secret string used to configure the GitHub webhook.
-    displayName: GitHub Webhook Secret
+  - name: GOGS_WEBHOOK_SECRET
+    description: A secret string used to configure the Gogs webhook.
+    displayName: Gogs Webhook Secret
     required: true
     from: '[a-zA-Z0-9]{40}'
     generate: expression
@@ -93,8 +93,8 @@ objects:
       type: Source
     triggers:
     - github:
-        secret: ${GITHUB_WEBHOOK_SECRET}
-      type: GitHub
+        secret: ${GOGS_WEBHOOK_SECRET}
+      type: Generic
     - type: ConfigChange
     - imageChange: {}
       type: ImageChange
@@ -129,8 +129,8 @@ objects:
       type: Source
     triggers:
     - github:
-        secret: ${GITHUB_WEBHOOK_SECRET}
-      type: GitHub
+        secret: ${GOGS_WEBHOOK_SECRET}
+      type: Generic
     - type: ConfigChange
     - type: ImageChange
       imageChange: {}
